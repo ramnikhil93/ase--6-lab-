@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type = "text/javascript">
+        function myfun() {
+            var name = document.getElementById("uname");
+            alert(name.value);
+            var data = name.value;
+
+            window.open("http://localhost:58064/Service1.svc/data/" + data);
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    UserName : <input type = "text" id="uname" />
+     <input type ="button"  value="Login" onclick="myfun()"/>
+    </div>
+    </form>
+</body>
+</html>
+
